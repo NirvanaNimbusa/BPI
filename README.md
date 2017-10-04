@@ -4,6 +4,8 @@ Sherief Reda (Brown University) and Adel Belouchrani (ENP)
 Based on "Blind Identification of Power Sources in Processors", in IEEE/ACM Design, Automation & Test in Europe, 2017.
 sherief_reda@Brown.edu and adel.belouchrani@enp.edu.dz
 
+Main flow script is hotspot_flow.m
+
 Sample data from HotSpot are given in the DATA folder for a 4-core configuration.
 
 nat_trace_*:  these are samples for natural response; each line has four measurements; temperature per core; ambient temperature already substracted
