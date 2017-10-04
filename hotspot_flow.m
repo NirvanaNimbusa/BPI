@@ -18,12 +18,17 @@ B=(eye(size(A))-A)*R;
 
 % prep the data for online evaluation
 eval_data=load('DATA_HOTSPOT_4CORES/eval_cores');
+% this is the actual power data used to generate the thermal traces
 p_act=eval_data(:, 1:num_cores);
+% this is the resultant thermal measurements from Hotspot
 MS=size(eval_data(:, num_cores+1:2*num_cores));
+% create a trace for power estimation that has 1) total power consumption
+% 2) thermal measurements
 trace=[sum(eval_data(:, 1:num_cores), 2), eval_data(:, num_cores+1:2*num_cores)];
+% write it down in a temporary file
 dlmwrite('DATA_HOTSPOT_4CORES/eval_cores_temp', trace, 'delimiter', '\t', 'precision','%.4f');   
 
-% on-line evaluation: use the model to identify p
+% on-line evaluation: use the model to identify p; only use temporary file 
 p=eval_runtime('DATA_HOTSPOT_4CORES/eval_cores_temp', A, B);
 p = p';
 err=0;

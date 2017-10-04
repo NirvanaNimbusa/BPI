@@ -1,3 +1,7 @@
+% Sherief Reda (Brown University) and Adel Belouchrani (ENP)
+% "Blind Identification of Power Sources in Processors", in IEEE/ACM Design, Automation & Test in Europe, 2017.
+% sherief_reda@Brown.edu and adel.belouchrani@enp.edu.dz
+
 function p=eval_runtime(fname, A, B)
     E=load(fname);
     T = E(:, 2:end)';
