@@ -1,5 +1,6 @@
 % Sherief Reda (Brown University) and Adel Belouchrani (ENP)
 % "Blind Identification of Power Sources in Processors", in IEEE/ACM Design, Automation & Test in Europe, 2017.
+% "Blind Identification of Thermal Models and Power Sources from Thermal Measurements ," in IEEE Journal on Sensors, 
 % sherief_reda@Brown.edu and adel.belouchrani@enp.edu.dz
 clear
 errors=[];
